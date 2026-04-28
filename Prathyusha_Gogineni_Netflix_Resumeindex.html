@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── Shareable preview (shows when link is shared via Slack, email, LinkedIn, iMessage) -->
+<title>Prathyusha Gogineni — Technical Program Manager</title>
+<meta name="description" content="TPM with 12 years driving software release management across client applications and partner device ecosystems. Cisco · Apple · PwC.">
+<meta property="og:title" content="Prathyusha Gogineni — Technical Program Manager">
+<meta property="og:description" content="TPM with 12 years driving software release management across client applications and partner device ecosystems. $199B payment volume · 530 stores · 27 countries.">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Prathyusha Gogineni — Technical Program Manager">
+<meta name="twitter:description" content="TPM with 12 years driving software release management. Cisco · Apple · PwC.">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red:      #E50914;
+    --red-dim:  #B20710;
+    --black:    #000000;
+    --surface:  #141414;
+    --surface2: #1A1A1A;
+    --surface3: #222222;
+    --rule:     #2A2A2A;
+    --text:     #E8E8E8;
+    --muted:    #888888;
+    --dim:      #555555;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+  }
+
+  /* ── Top + bottom Netflix bar */
+  body::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: var(--red);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 44px 52px 70px;
+    position: relative;
+  }
+
+  /* ── Ambient glow */
+  .glow-orb {
+    position: absolute;
+    top: -60px; left: -120px;
+    width: 520px; height: 320px;
+    background: radial-gradient(ellipse, rgba(229,9,20,0.07) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─────────────── HEADER ─────────────── */
+  .header { position: relative; z-index: 1; margin-bottom: 32px; }
+
+  .eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: var(--red);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--red-dim), transparent);
+  }
+
+  .name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 86px);
+    color: #FFFFFF;
+    line-height: 0.88;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 80px rgba(229,9,20,0.18);
+  }
+
+  .title-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  /* ── Contact links row */
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 0;
+    font-size: 12.5px;
+  }
+  .contact-sep {
+    color: var(--dim);
+    margin: 0 10px;
+    font-size: 10px;
+  }
+  .contact a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .contact a:hover { color: #FFFFFF; }
+  .contact a:hover .icon { color: var(--red); }
+  .icon { font-size: 11px; color: var(--dim); transition: color 0.15s; }
+
+  /* ─────────────── STAT BAR ─────────────── */
+  .stat-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    margin: 28px 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .stat-bar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--red), var(--red-dim), transparent);
+    z-index: 1;
+  }
+  .stat-cell {
+    padding: 16px 10px;
+    text-align: center;
+    border-right: 1px solid var(--rule);
+    background: var(--surface);
+    transition: background 0.2s;
+    cursor: default;
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-cell:hover { background: var(--surface2); }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 27px;
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+  .stat-lbl {
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  /* ─────────────── SUMMARY ─────────────── */
+  .summary {
+    font-size: 13.5px;
+    line-height: 1.78;
+    color: #BBBBBB;
+    border-left: 2px solid var(--red);
+    padding-left: 18px;
+    margin-bottom: 36px;
+  }
+  .summary strong { color: #FFFFFF; font-weight: 600; }
+
+  /* ─────────────── SECTIONS ─────────────── */
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 36px 0 20px;
+  }
+  .section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.22em;
+    color: var(--red);
+    white-space: nowrap;
+  }
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--rule), transparent);
+  }
+
+  /* ─────────────── ROLES ─────────────── */
+  .role-block { margin-bottom: 22px; }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+  .role-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .role-sep { color: var(--dim); margin: 0 6px; font-size: 12px; }
+  .role-co  { font-size: 13px; font-weight: 500; color: #888888; font-family: 'Barlow', sans-serif; }
+  .role-dates { font-size: 11px; color: var(--dim); font-style: italic; }
+
+  .sub-role {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 12px 0 6px;
+    padding: 7px 12px;
+    border-left: 2px solid var(--red);
+    background: var(--surface);
+  }
+  .sub-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--red);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  .sub-dates { font-size: 11px; color: var(--dim); font-style: italic; }
+
+  /* ─────────────── BULLETS ─────────────── */
+  ul.bullets {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  ul.bullets li {
+    font-size: 12.5px;
+    line-height: 1.68;
+    color: #AAAAAA;
+    padding-left: 18px;
+    position: relative;
+  }
+  ul.bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-size: 10px;
+    top: 3px;
+  }
+  ul.bullets li strong { color: #DDDDDD; font-weight: 600; }
+
+  /* ─────────────── SKILLS ─────────────── */
+  .skills-grid {
+    display: grid;
+    gap: 0;
+  }
+  .skill-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .skill-row:last-child { border-bottom: none; }
+  .skill-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .skill-val {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ─────────────── EDUCATION ─────────────── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .edu-row:last-child { border-bottom: none; }
+  .edu-deg    { font-size: 13px; font-weight: 600; color: #CCCCCC; }
+  .edu-school { font-size: 12px; color: var(--muted); margin-top: 1px; }
+  .edu-yr     { font-size: 11px; color: var(--dim); font-style: italic; }
+
+  /* ─────────────── FOOTER ─────────────── */
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    flex-wrap: wrap;
+  }
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-n {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: var(--red);
+  }
+  .footer-text { font-size: 10.5px; color: var(--dim); letter-spacing: 0.04em; }
+  .footer-cta {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .footer-cta a {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.15s;
+  }
+  .footer-cta a:hover { opacity: 0.8; }
+
+  /* ─────────────── FADE-IN ─────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .header   { animation: fadeUp 0.5s ease both; }
+  .stat-bar { animation: fadeUp 0.5s 0.08s ease both; }
+  .summary  { animation: fadeUp 0.5s 0.16s ease both; }
+
+  /* ─────────────── PRINT ─────────────── */
+  @media print {
+    body::before { display: none; }
+    body { background: #fff; color: #000; }
+    .page { padding: 20px 28px; max-width: 100%; }
+    .glow-orb { display: none; }
+    .name { color: #000; text-shadow: none; font-size: 52px; }
+    .title-tag { color: #c00; }
+    .eyebrow { color: #c00; }
+    .stat-bar { border-color: #ddd; }
+    .stat-cell { background: #f5f5f5; border-right-color: #ddd; }
+    .stat-num { color: #000; }
+    .stat-lbl { color: #666; }
+    .summary { color: #333; border-left-color: #c00; }
+    .summary strong { color: #000; }
+    .section-label { color: #c00; }
+    .section-rule { background: #ddd; }
+    .role-title { color: #000; }
+    .role-co, .role-dates { color: #666; }
+    .sub-role { background: #f5f5f5; border-left-color: #c00; }
+    .sub-title { color: #c00; }
+    ul.bullets li { color: #333; }
+    ul.bullets li::before { color: #c00; }
+    ul.bullets li strong { color: #000; }
+    .skill-label { color: #c00; }
+    .skill-val { color: #555; }
+    .edu-deg { color: #000; }
+    .edu-school, .edu-yr { color: #666; }
+    .footer { border-top-color: #ddd; }
+    .footer-n { color: #c00; }
+    .contact a { color: #555; }
+    a { text-decoration: none; }
+  }
+
+  /* ─────────────── MOBILE ─────────────── */
+  @media (max-width: 600px) {
+    .page { padding: 28px 24px 48px; }
+    .stat-bar { grid-template-columns: repeat(3, 1fr); }
+    .stat-cell:nth-child(4),
+    .stat-cell:nth-child(5) { grid-column: span 1; }
+    .skill-row { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="glow-orb"></div>
+
+  <!-- ── HEADER -->
+  <div class="header">
+    <div class="eyebrow">Candidate Profile</div>
+
+    <div class="name">Prathyusha Gogineni</div>
+    <div class="title-tag">Technical Program Manager</div>
+
+    <!-- Clickable contact links -->
+    <div class="contact">
+      <a href="https://maps.google.com/?q=San+Francisco,+CA" target="_blank" rel="noopener">
+        <span class="icon">📍</span> San Francisco, CA
+      </a>
+      <span class="contact-sep">|</span>
+      <a href="tel:4156453373">
+        <span class="icon">📞</span> 415-645-3373
+      </a>
+      <span class="contact-sep">|</span>
+      <a href="mailto:prathyushagogineni86@gmail.com">
+        <span class="icon">✉</span> prathyushagogineni86@gmail.com
+      </a>
+      <span class="contact-sep">|</span>
+      <a href="https://www.linkedin.com/in/prathyusha-gogineni/" target="_blank" rel="noopener">
+        <span class="icon">in</span> linkedin.com/in/prathyusha-gogineni
+      </a>
+    </div>
+  </div>
+
+  <!-- ── STAT BAR -->
+  <div class="stat-bar">
+    <div class="stat-cell">
+      <div class="stat-num">16</div>
+      <div class="stat-lbl">Teams · 3 Regions · 50K+ Users</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">$199B</div>
+      <div class="stat-lbl">Payment Volume Impacted</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">1,200</div>
+      <div class="stat-lbl">Devices Managed Per Day</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">95%</div>
+      <div class="stat-lbl">Device Turnaround Rate</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">530</div>
+      <div class="stat-lbl">Stores · 27 Countries</div>
+    </div>
+  </div>
+
+  <!-- ── SUMMARY -->
+  <div class="summary">
+    TPM with 12 years owning <strong>software release management across client applications, partner device ecosystems, and platform systems</strong> on competing release cadences — cutting defects 40% and shipping 30% faster across 16+ teams and 3 regions. Brings technical depth to challenge <strong>client-layer vs. platform tradeoffs</strong>, governance rigor to ship complex programs cleanly, and the precision to hold engineering and leadership in lockstep under pressure.
+  </div>
+
+  <!-- ── EXPERIENCE -->
+  <div class="section-head">
+    <div class="section-label">Experience</div>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- CISCO -->
+  <div class="role-block">
+    <div class="role-header">
+      <div>
+        <span class="role-title">Technical Program Manager</span>
+        <span class="role-sep">·</span>
+        <span class="role-co">Cisco Systems · San Jose, CA</span>
+      </div>
+      <div class="role-dates">Apr 2023 – Present</div>
+    </div>
+
+    <div class="sub-role">
+      <div class="sub-title">Program Manager, Commerce Engineering</div>
+      <div class="sub-dates">Jan 2026 – Present</div>
+    </div>
+    <ul class="bullets">
+      <li><strong>Accelerated order cycle time</strong> across B2B Order &amp; Subscription Management — streamlining end-to-end workflows across Product, Engineering, and Operations to reduce fulfillment latency for enterprise customers.</li>
+      <li><strong>Led Operational Technology automation program</strong> — eliminating manual ops workflows and translating labor-intensive processes into scalable, automated pipelines.</li>
+      <li><strong>Owned scope, schedule, and risk</strong> across 3 high-visibility commerce programs — cut cross-team dependency latency <strong>~20%</strong> by standardizing executive status reporting across Salesforce and Commerce Workspace.</li>
+    </ul>
+
+    <div class="sub-role">
+      <div class="sub-title">Program Manager, Connected Engineering &amp; Transformation</div>
+      <div class="sub-dates">Apr 2023 – Jan 2026</div>
+    </div>
+    <ul class="bullets">
+      <li><strong>Scaled release operations</strong> for AI/ML client platforms serving <strong>18K+ enterprise users</strong> across <strong>16 agile teams in 3 regions</strong> — cutting post-release defects <strong>40%</strong>, improving compliance <strong>35%</strong>, and shipping <strong>12 epics and 60+ features</strong> in a single quarter.</li>
+      <li><strong>Implemented Agile/SAFe</strong> across 16 global teams — driving a <strong>30% sprint velocity gain</strong> and tightening cross-team handoff discipline across 3 regions.</li>
+    </ul>
+  </div>
+
+  <!-- APPLE -->
+  <div class="role-block">
+    <div class="role-header">
+      <div>
+        <span class="role-title">Program Manager &amp; Technical Specialist</span>
+        <span class="role-sep">·</span>
+        <span class="role-co">Apple Inc. · Cupertino, CA</span>
+      </div>
+      <div class="role-dates">Nov 2018 – Apr 2023</div>
+    </div>
+
+    <div class="sub-role">
+      <div class="sub-title">Technical Specialist — Designer Rotation (IS&amp;T · Retail POS · Inventory)</div>
+      <div class="sub-dates">Aug 2019 – Apr 2023</div>
+    </div>
+    <ul class="bullets">
+      <li><strong>Designed UX flows and CMS</strong> across <strong>Web, iOS, iPadOS, and macOS</strong> — deployed to <strong>530 stores in 27 countries</strong>, underpinning <strong>$199B in annual payment volume</strong>; managed distinct API contracts, hardware constraints, and release cadences across four OS surfaces concurrently.</li>
+      <li><strong>Advised Creative Directors and VPs</strong> on cross-platform system decisions — drove release readiness across IS&amp;T, AppleCare, and Retail, owning milestone sign-off, risk gates, and deployment criteria.</li>
+    </ul>
+
+    <div class="sub-role">
+      <div class="sub-title">Program Manager — Hardware Repair Center</div>
+      <div class="sub-dates">Nov 2018 – Jul 2019</div>
+    </div>
+    <ul class="bullets">
+      <li><strong>Ran device operations</strong> processing <strong>1,200 Apple devices per day</strong> across a <strong>600-person warehouse</strong> — sustaining <strong>95% TAT</strong> across 530 stores in 27 countries by building release governance covering intake, triage, quality validation, and deployment.</li>
+      <li><strong>Synchronized hardware engineering, logistics, and QA</strong> across parallel workstreams — neutralizing risks before they reached the device pipeline and enforcing zero-downtime SLA standards globally.</li>
+    </ul>
+  </div>
+
+  <!-- PWC -->
+  <div class="role-block">
+    <div class="role-header">
+      <div>
+        <span class="role-title">Program Manager</span>
+        <span class="role-sep">·</span>
+        <span class="role-co">PwC · Multiple Clients</span>
+      </div>
+      <div class="role-dates">Sep 2012 – Oct 2017</div>
+    </div>
+    <ul class="bullets" style="margin-top:8px;">
+      <li><strong>Directed 5+ global cross-functional programs</strong> — cutting delivery errors 30%, embedding KPI and root-cause frameworks across engineering orgs, and building executive dashboards that accelerated decision velocity for senior stakeholders.</li>
+    </ul>
+  </div>
+
+  <!-- ── CORE COMPETENCIES -->
+  <div class="section-head">
+    <div class="section-label">Core Competencies</div>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-row">
+      <div class="skill-label">Release &amp; SDLC</div>
+      <div class="skill-val">Requirements gathering · Scoping · Implementation · Deployment · Release management · Risk mitigation · Dependency management</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Client &amp; Platform</div>
+      <div class="skill-val">iOS · iPadOS · macOS · Web · Embedded environments · Multi-platform release cadences · API contracts · Partner device ops</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Program Delivery</div>
+      <div class="skill-val">Cross-functional leadership · Agile/SAFe · PI Planning · OKR alignment · Executive communication · Stakeholder reporting</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Tools</div>
+      <div class="skill-val">Jira · Jira Align · Confluence · Salesforce · KPI frameworks · Executive dashboards</div>
+    </div>
+  </div>
+
+  <!-- ── EDUCATION -->
+  <div class="section-head">
+    <div class="section-label">Education</div>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="edu-row">
+    <div>
+      <div class="edu-deg">M.S. International Affairs</div>
+      <div class="edu-school">Northeastern University</div>
+    </div>
+    <div class="edu-yr">2011</div>
+  </div>
+  <div class="edu-row">
+    <div>
+      <div class="edu-deg">B.S. Computer Science</div>
+      <div class="edu-school">Acharya Nagarjuna University</div>
+    </div>
+    <div class="edu-yr">2007</div>
+  </div>
+
+  <!-- ── FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <div class="footer-n">N</div>
+      <div class="footer-text">Prepared for Netflix · Client &amp; Partner Technologies · TPM 5</div>
+    </div>
+    <div class="footer-cta">
+      Reach out →
+      <a href="mailto:prathyushagogineni86@gmail.com">prathyushagogineni86@gmail.com</a>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>
